@@ -1,16 +1,56 @@
-let X = 10;
-let Y = 10;
+let X = 5;
+let Y = 5;
+
+function gameOver(){
+    $('.mine').addClass("showMines")
+    alert("game over: you lost");
+}
+
+function isGameOver(){
+    var boardSize = X*Y;
+    var mineCount = $('.mine').length;
+    var clickCount = $('.clicked').length
+
+    return boardSize == mineCount + clickCount;
+
+}
 
 function clickCell(e) {
+    var me = $(e.target);
+    console.log(me.hasClass("mine"));
+    //mine or not mine.
+    if(me.hasClass("mine")){
+        me.html("*");
+        me.addClass("boom");
+        gameOver();
+    } else {
+        me.addClass("clicked")
+        me.html(countNeighboringMines(e.target));
+    }
+
+    if(isGameOver())
+    {
+        alert("game Over: you Won");
+    }
     // Implement this.
 }
 
 function rightClickCell(e) {
+    e.preventDefault();
+    $(e.target).toggleClass("flag");
+    console.log(e);
     // Implement this.
 }
 
-function countNeighboringMines() {
-    // Implement this.
+function countNeighboringMines(center) {
+    var count = 0;
+    var neighbors = getNeighbors(center);
+    for(var i = 0; i < neighbors.length; i++){
+        if(neighbors[i].hasClass("mine")){
+            count++;
+        }
+    }
+    return count;
 }
 
 

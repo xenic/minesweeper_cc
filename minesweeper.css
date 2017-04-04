@@ -11,9 +11,26 @@ tr, td{
     height: 30px;
     cursor: pointer;
     background-color: #CCCCCC;
+    text-align: center;
+    color: purple;
+    font-weight: bold;
 }
 
 .container{
     display: flex;
     justify-content: center;
+}
+
+
+.showMines {
+    background-color: red;
+}
+
+.boom {
+    color: white;
+    font-size: 20px;
+}
+
+.flag {
+    background-color: blue;
 }
