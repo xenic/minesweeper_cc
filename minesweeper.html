@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MineSweeper</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="minesweeper.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-offset-5 col-xs-2 text-center">
+                        <button class="btn-lg" id="startButton">start</button><br/>
+                    </div>
+                    <div class="col-xs-4 text-right" style="display:none">
+                        <span>Bombs: </span><span id="bombs"></span><br/>
+                        <span>Cleared: </span><span id="cleared"></span><br/>
+                        <span>Mystery: </span><span id="mystery"></span><br/>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default col-xs-12">
+                    <div class="panel-body">
+                        <table id="gameBoard"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="minesweeper.js"></script>
+    </body>
+</html>

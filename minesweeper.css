@@ -1,0 +1,19 @@
+
+
+
+table{
+    border: 1px solid black;
+}
+
+tr, td{
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #CCCCCC;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
